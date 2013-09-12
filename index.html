@@ -1,0 +1,152 @@
+<!doctype html>
+<html>
+<head>
+  <style type="text/css" media="all">
+    .pendulo{
+      width: 6px;
+      height: 101px;
+      -webkit-transform-origin: 10px 30px;
+      -webkit-animation: pendulo 4s ease-in-out infinite alternate;
+      margin: 0 auto;
+      background-color: rgb(172, 172, 172);
+      position: relative;
+      top: 5px;
+    }
+    
+    /*pendulo*/
+    @-webkit-keyframes pendulo{
+      0% { -webkit-transform: rotate(60deg);}
+      100% { -webkit-transform: rotate(-60deg);}
+    }
+    
+    /*minutero*/
+    .min{
+      -webkit-animation: minutero 4s linear infinite;
+      
+      background: rgb(63, 8, 8);
+       position:absolute;
+        left:45px;
+        top:30px;
+        width:9px;
+        height:23px;
+        
+        -webkit-transform-origin:5.5px 18px;
+        
+        -moz-transform-origin:5.5px 18px;
+        -moz-transform:rotate(55deg);
+        -o-transform-origin:5.5px 18px;
+        -o-transform:rotate(55deg);
+
+    }
+    @-webkit-keyframes segundero {
+      from { -webkit-transform: rotate(0deg) scaleY(1); }
+      25% { -webkit-transform: rotate(90deg) scaleY(0.9); }
+      50% { -webkit-transform: rotate(180deg) scaleY(1); }
+      75% { -webkit-transform: rotate(270deg) scaleY(0.8); }
+      to { -webkit-transform: rotate(360deg) scaleY(1); }
+    }
+    /*segundero*/
+    .seg{
+      -webkit-animation: segundero 9s linear infinite;
+      
+      background: rgb(63, 8, 8);
+       position:absolute;
+        left:45px;
+        top:30px;
+        width:9px;
+        height:23px;
+        
+        -webkit-transform-origin:5.5px 18px;
+        
+        -moz-transform-origin:5.5px 18px;
+        -moz-transform:rotate(-45deg);
+        -o-transform-origin:5.5px 18px;
+        -o-transform:rotate(-45deg);
+    }
+     /*minutero*/
+    
+    @-webkit-keyframes minutero {
+      from { -webkit-transform: rotate(0deg) scaleY(1); }
+      25% { -webkit-transform: rotate(90deg) scaleY(0.9); }
+      50% { -webkit-transform: rotate(180deg) scaleY(1); }
+      75% { -webkit-transform: rotate(270deg) scaleY(0.8); }
+      to { -webkit-transform: rotate(360deg) scaleY(1); }
+    }
+    .caja {
+          background: rgba(121, 90, 57, 0.92);
+          width: 35%;
+          margin: 0 auto;
+          position: relative;
+          height: 19em;
+          border-radius: 10px;
+      }
+      .pendulo > span {
+        width: 1.5em;
+        height: 1.5em;
+        display: inline-block;
+        margin-top: 5em;
+        margin-left: -10px;
+        background: rgb(148, 140, 56);
+        border-radius: 50%;
+      }
+      .head {
+        width: 100%;
+        height: 2em;
+        position: absolute;
+        z-index: 1;
+        background: brown;
+      }
+      .borde_head {
+        width: 100%;
+        background: rgb(72, 82, 72);
+        height: 9px;
+        border-radius: 50%;
+        margin-top: -5px;
+      }
+      .content_pendulo {
+        background: rgb(65, 61, 57);
+        width: 77%;
+        margin: 0 auto;
+        position: relative;
+        top: 4em;
+        height: 8em;
+      }
+      .head_pendulo {
+        background: rgb(65, 61, 57);
+        position: absolute;
+        width: 100%;
+        height: 24%;
+        z-index: 9;
+      }
+      .reloj {
+        background: rgb(245, 245, 245);
+        width: 6em;
+        height: 6em;
+        border-radius: 50%;
+        position: relative;
+        top: 3em;
+        margin: 0 auto;
+        text-align:center;
+      }
+  </style></head>
+  
+  <body>
+    <section class="caja">
+      <div class="head">
+        <div class="borde_head"></div>
+      </div>
+      <div class="reloj">
+        <span class="min"></span>
+        <span class="seg"></span>
+      </div>
+      <div class="content_pendulo">
+        <div class="head_pendulo"></div>
+        <div class="pendulo">
+          <span></span>
+        </div>
+        <div class="footer_pendulo"></div>
+      </div>
+    </section>
+  
+
+</body></html>
